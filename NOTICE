@@ -1,0 +1,20 @@
+the mit license in LICENSE covers the work authored in this repository:
+
+    B23CS1072.py          the agent
+    OLDAGENT.py           the earlier version of the agent, kept as a baseline
+    README.md             the write-up
+
+it does not cover the game engine and sample players, which were provided as
+course material and keep whatever terms they were released under:
+
+    board.py
+    config.py
+    game_runner.py
+    docs/GameEngine.md
+    p22cs201.py
+    p25cs0004.py
+    AI_Assignment1_2026.pdf
+
+these came from the assignment repository at
+github.com/Divyaanshmertia/AI-Assignment-Spartans-Chess-Tournament-2.0
+and are included unmodified so the agent can actually be run.

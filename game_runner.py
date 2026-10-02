@@ -2,7 +2,9 @@ import time
 from board import GameEngine, Move
 from p22cs201 import P22CS201
 from p25cs0004 import P25CS0004
+from B23CS1072 import B23CS1072
 from config import *
+from gpt import gpt
 
 PIECE_SYMBOLS = {
     'wP': '♟', 'bP': '♙', 'wN': '♞', 'bN': '♘',
@@ -172,6 +174,6 @@ def run_game(white_player_type, black_player_type, total_time_seconds=60):
     print(f"Flags: White={white_flag}, Black={black_flag}")
 
 if __name__ == "__main__":
-    run_game(white_player_type=P25CS0004, black_player_type=P22CS201, total_time_seconds=60)
+    run_game(white_player_type=gpt, black_player_type=B23CS1072, total_time_seconds=60)
 
 ## Replace by your AI agents for test purposes. Note you only have to submit one AI agent.

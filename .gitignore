@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# a second, separate agent attempt - not part of this project's work
+gpt.py
