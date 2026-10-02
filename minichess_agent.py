@@ -1,12 +1,12 @@
 """
-B23CS1072.py -- agent for the 6x8 "Spartans" mini-chess tournament.
+A search agent for 6x8 minichess.
 
 Adversarial game-tree agent:
     iterative deepening negamax + alpha-beta (PVS)
     transposition table (Zobrist), killer moves, history heuristic
     null-move pruning, late-move reductions, check extensions
     quiescence search over captures (with check evasions)
-    tournament-aware asymmetric evaluation + tapered piece-square tables
+    scoring-aware asymmetric evaluation + tapered piece-square tables
     self-managed clock (never flags)
 
 The underlying chess engine (board.py / config.py) is NOT modified. This file
@@ -35,7 +35,7 @@ CODE = {'wP': WP, 'wN': WN, 'wB': WB, 'wR': WR, 'wK': WK,
         'bP': BP, 'bN': BN, 'bB': BB, 'bR': BR, 'bK': BK,
         EMPTY_SQUARE: EMPTY}
 
-# Capture values, taken straight from the tournament points table:
+# Capture values, taken straight from the match scoring table:
 # pawn 20, bishop 70, knight 70, rook 100. These ARE the score, so the search
 # optimises the real objective rather than a proxy.
 VAL = [0] * 16
@@ -377,8 +377,8 @@ class _TimeUp(Exception):
     pass
 
 
-class B23CS1072:
-    """Tournament agent. Interface: get_best_move(), evaluate_board()."""
+class MiniChessAgent:
+    """Interface: get_best_move(), evaluate_board()."""
 
     # Weight (percent) on our OWN material in the evaluation. Below 100 it
     # makes even trades profitable, which is correct here because only the
@@ -387,8 +387,8 @@ class B23CS1072:
     LW_SAFE = 100
     LW_WIN = 90
 
-    # The tournament control is a 60-second game with at most 75 moves a side
-    # (assignment PDF; game_runner.py defaults to the same). The agent paces
+    # The time control is a 60-second game with at most 75 moves a side,
+    # which is what game_runner.py defaults to. The agent paces
     # itself against this and tracks its own spend, so it cannot flag.
     TOTAL_TIME = 60.0
     MAX_MOVES = 75
@@ -414,7 +414,7 @@ class B23CS1072:
         self.nodes_expanded = 0
         self.depth = 1
 
-        # clock self-management (tournament gives 60s / 75 moves per side)
+        # clock self-management (60s / 75 moves per side)
         self.clock = self.TOTAL_TIME
         self.reserve = self.TOTAL_TIME * 0.035
         self.moves_made = 0
@@ -737,7 +737,7 @@ class B23CS1072:
     def _evaluate(self):
         """Score from the ROOT player's point of view, in points.
 
-        Tournament scoring is not zero-sum: a match is worth 600 for
+        Match scoring is not zero-sum: a match is worth 600 for
         checkmate, 0 for a loss, and otherwise exactly the value of the
         pieces WE captured -- the opponent's captures never subtract from
         us. So the real objective is to minimise the opponent's surviving

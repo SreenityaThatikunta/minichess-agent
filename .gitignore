@@ -2,5 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# a second, separate agent attempt - not part of this project's work
+# Kept locally, not part of this repository
+AI_Assignment1_2026.pdf
 gpt.py

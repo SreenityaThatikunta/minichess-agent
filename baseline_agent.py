@@ -12,9 +12,10 @@ from config import (
     ROOK_PST,
 )
 
-class OLDAGENT:
+class BaselineAgent:
     """
-    Iterative-deepening alpha-beta player for the 6x8 mini-chess engine.
+    The earlier version of the agent, kept as a measurement baseline.
+    Iterative-deepening alpha-beta over the engine's own move generator.
     """
     MATE_SCORE = 100000
 
