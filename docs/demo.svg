@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="682" height="430" viewBox="0 0 682 430" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" role="img" aria-label="A minichess game in progress in the terminal">
+<rect width="682" height="430" rx="8" fill="#0d1117"/>
+<rect width="682" height="34" rx="8" fill="#0d1117"/>
+<line x1="0" y1="34" x2="682" y2="34" stroke="#30363d" stroke-width="1"/>
+<circle cx="18" cy="17" r="6" fill="#ff5f56"/>
+<circle cx="36" cy="17" r="6" fill="#ffbd2e"/>
+<circle cx="54" cy="17" r="6" fill="#27c93f"/>
+<text x="341.0" y="22" fill="#8b949e" text-anchor="middle" font-size="12">python3 game_runner.py</text>
+<text x="18" y="54" fill="#c9d1d9" xml:space="preserve">     a   b   c   d   e   f</text>
+<text x="18" y="72" fill="#c9d1d9" xml:space="preserve">   ┌───┬───┬───┬───┬───┬───┐</text>
+<text x="18" y="90" fill="#c9d1d9" xml:space="preserve"> 8 │ ♘ │ ♗ │ ♖ │ ♖ │   │ ♗ │ 8</text>
+<text x="18" y="108" fill="#c9d1d9" xml:space="preserve">   ├───┼───┼───┼───┼───┼───┤</text>
+<text x="18" y="126" fill="#c9d1d9" xml:space="preserve"> 7 │ ♙ │ ♙ │   │ ♙ │   │ ♝ │ 7</text>
+<text x="18" y="144" fill="#c9d1d9" xml:space="preserve">   ├───┼───┼───┼───┼───┼───┤</text>
+<text x="18" y="162" fill="#c9d1d9" xml:space="preserve"> 6 │   │   │ ♙ │ ♔ │   │   │ 6   Black (BaselineAgent): 00:59</text>
+<text x="18" y="180" fill="#c9d1d9" xml:space="preserve">   ├───┼───┼───┼───┼───┼───┤</text>
+<text x="18" y="198" fill="#c9d1d9" xml:space="preserve"> 5 │   │   │   │   │ ♙ │   │ 5</text>
+<text x="18" y="216" fill="#c9d1d9" xml:space="preserve">   ├───┼───┼───┼───┼───┼───┤</text>
+<text x="18" y="234" fill="#c9d1d9" xml:space="preserve"> 4 │   │   │   │   │   │   │ 4</text>
+<text x="18" y="252" fill="#c9d1d9" xml:space="preserve">   ├───┼───┼───┼───┼───┼───┤</text>
+<text x="18" y="270" fill="#c9d1d9" xml:space="preserve"> 3 │   │ ♞ │ ♟ │ ♝ │ ♟ │   │ 3   White (MiniChessAgent): 00:59</text>
+<text x="18" y="288" fill="#c9d1d9" xml:space="preserve">   ├───┼───┼───┼───┼───┼───┤</text>
+<text x="18" y="306" fill="#c9d1d9" xml:space="preserve"> 2 │ ♟ │ ♟ │   │ ♟ │   │ ♟ │ 2</text>
+<text x="18" y="324" fill="#c9d1d9" xml:space="preserve">   ├───┼───┼───┼───┼───┼───┤</text>
+<text x="18" y="342" fill="#c9d1d9" xml:space="preserve"> 1 │   │   │ ♜ │ ♚ │ ♜ │   │ 1</text>
+<text x="18" y="360" fill="#c9d1d9" xml:space="preserve">   └───┴───┴───┴───┴───┴───┘</text>
+<text x="18" y="378" fill="#c9d1d9" xml:space="preserve">     a   b   c   d   e   f</text>
+<text x="18" y="396" fill="#c9d1d9" xml:space="preserve"></text>
+<text x="18" y="414" fill="#58a6ff" xml:space="preserve">capture pinned to depth 6 for reproducibility - 21,234 nodes on the last move</text>
+</svg>
