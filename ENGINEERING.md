@@ -39,7 +39,16 @@ A match is worth:
 | Loss | 0, regardless of what you captured |
 | Draw, stalemate, or turn limit | the value of the pieces you captured |
 
-Capture values: pawn 20, bishop 70, knight 70, rook 100.
+Capture values: pawn 20, bishop 70, knight 70, rook 100. A check is worth +2,
+which only matters in a drawn game.
+
+These are the tournament rules, and they are what every measurement below was
+taken under. `tournament_match.py` implements them. The `game_runner.py` that
+ships with the variant scores a game differently — additively, both sides
+keeping their captures, +2 a check and +300 for a mate, with no override and no
+zeroing on a loss — so the same game can read 818–282 there and 600–0 here. The
+distinction matters because the two rule sets reward different play, and
+everything that follows is reasoning about the first.
 
 Two consequences fall straight out of this:
 

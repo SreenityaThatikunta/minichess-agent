@@ -2,7 +2,11 @@ The MIT License in LICENSE covers the work authored in this repository:
 
     minichess_agent.py    the agent
     baseline_agent.py     the earlier version of the agent, kept as a baseline
+    tournament_match.py   the match runner and score card for the tournament rules
+    tests/                the test suite
+    tools/render_demo.py  the screenshot generator
     README.md             the write-up
+    ENGINEERING.md        the long-form write-up
 
 It does not cover the game engine, match runner and sample opponents, which are
 third party and keep whatever terms they were released under:
@@ -18,4 +22,6 @@ Those files originate from
 github.com/Divyaanshmertia/AI-Assignment-Spartans-Chess-Tournament-2.0
 and are included essentially unmodified so the agent can actually be run. The
 only change is to game_runner.py, whose imports and default matchup were
-repointed at the agents in this repository.
+repointed at the agents in this repository. Its scoring is untouched, and
+differs from the tournament rules that tournament_match.py implements; README.md
+sets out both.
